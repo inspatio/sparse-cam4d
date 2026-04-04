@@ -1,0 +1,11 @@
+__pycache__/
+.vscode/
+docs/
+CLAUDE.md
+.claude/
+.history/
+output/
+data/
+
+demo_data_cp.md
+copy_demo_data.sh

@@ -1,0 +1,30 @@
+name: sparse4d
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - cudatoolkit=11.8
+  - plyfile=1.1
+  - python=3.9.18
+  - pip=25.0.1
+  - colmap
+  - pip:
+    - torch==2.1.0+cu118
+    - torchvision==0.16.0+cu118
+    - torchmetrics==1.5.1
+    - tqdm==4.65.0
+    - imagesize==1.4.1
+    - kornia==0.8.0
+    - omegaconf==2.3.0
+    - ./simple-knn
+    - ./pointops2
+    - mmcv==2.2.0
+    - matplotlib==3.9.2
+    - loguru==0.7.3
+    - lpips==0.1.4
+    - plyfile==1.1
+    - pytorch-msssim==1.0.0
+    - open3d==0.17.0
+    - imageio==2.27.0
+    - imageio-ffmpeg==0.4.8
