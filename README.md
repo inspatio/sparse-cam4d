@@ -1,6 +1,6 @@
 # SparseCam4D: Spatio-Temporally Consistent 4D Reconstruction from Sparse Cameras
 
-### [Project page]() | [Paper](https://arxiv.org/pdf/2603.26481v1)
+### [Project page](https://inspatio.github.io/sparse-cam4d/) | [Paper](https://arxiv.org/abs/2603.26481)
 
 > **[SparseCam4D: Spatio-Temporally Consistent 4D Reconstruction from Sparse Cameras](https://arxiv.org/abs/2603.26481v1)**,
 > Weihong Pan, Xiaoyu Zhang, Zhuang Zhang, Zhichao Ye, Nan Wang, Haomin Liu, Guofeng Zhang
