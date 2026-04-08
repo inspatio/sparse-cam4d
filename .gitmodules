@@ -1,0 +1,16 @@
+[submodule "preprocess/submodules/VGGT"]
+	path = preprocess/submodules/VGGT
+	url = https://github.com/facebookresearch/vggt.git
+	ignore = untracked
+[submodule "preprocess/submodules/RoMa"]
+	path = preprocess/submodules/RoMa
+	url = https://github.com/Parskatt/RoMa.git
+	ignore = untracked
+[submodule "preprocess/submodules/FlowFormerPlusPlus"]
+	path = preprocess/submodules/FlowFormerPlusPlus
+	url = https://github.com/XiaoyuShi97/FlowFormerPlusPlus.git
+	ignore = untracked
+[submodule "preprocess/submodules/VideoDepthAnything"]
+	path = preprocess/submodules/VideoDepthAnything
+	url = https://github.com/DepthAnything/Video-Depth-Anything.git
+	ignore = untracked

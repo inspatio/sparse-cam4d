@@ -53,7 +53,7 @@ balloon1/
 
 **Pseudo-view images** under `preprocess/time_*/diffusion/` are synthesized by [ViewCrafter](https://github.com/Drexubery/ViewCrafter) from training cameras to cover additional viewpoints at each timestamp with sparse camera poses estimated by [VGGT](https://github.com/facebookresearch/vggt).
 
-> **Note:** Full data preparation scripts (depth estimation, pseudo-view synthesis, camera pose and point cloud preprocessing) will be released in a future update.
+> **Note:** For full data preparation pipeline, please refer to [preprocess](preprocess/README.md).
 
 ### Running
 

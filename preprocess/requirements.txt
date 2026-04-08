@@ -1,0 +1,31 @@
+# Core
+torch>=2.1.0
+torchvision>=0.16.0
+numpy>=1.26.0
+opencv-python>=4.8.0
+Pillow>=10.0.0
+
+# Pipeline utilities
+loguru>=0.7.0
+tqdm>=4.65.0
+omegaconf>=2.3.0
+PyYAML>=6.0
+
+# 3D / geometry
+trimesh>=4.0.0
+plyfile>=1.0
+
+# Depth / image processing
+imageio>=2.27.0
+scikit-image>=0.22.0
+matplotlib>=3.7.0
+OpenEXR>=3.0.0
+
+# FlowFormerPlusPlus
+timm==0.6.7
+yacs>=0.1.8
+
+# pytorch3d (for ViewCrafter point cloud rendering)
+# Install separately: https://github.com/facebookresearch/pytorch3d/blob/main/INSTALL.md
+# conda install pytorch3d -c pytorch3d  (if available for your CUDA version)
+# or: pip install "git+https://github.com/facebookresearch/pytorch3d.git"

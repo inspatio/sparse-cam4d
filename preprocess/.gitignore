@@ -1,0 +1,10 @@
+output/
+__pycache__/
+*.pyc
+*.pyo
+submodules/ViewCrafter/__pycache__/
+submodules/ViewCrafter/lvdm/**/__pycache__/
+submodules/ViewCrafter/utils/__pycache__/
+submodules/ViewCrafter/configs/__pycache__/
+submodules/ViewCrafter/checkpoints
+*_test.yaml

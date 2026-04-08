@@ -1,0 +1,34 @@
+# SparseCam4D Preprocessing Config
+# Example: balloon1 scene
+
+# ── Input ──────────────────────────────────────────────────────────────────────
+cam_root: output/ballon1_test/images   # dir with all camera frames, named <cam>_<time>.png
+train_cams: [cam01, cam06, cam10]      # cameras selected for 4DGS training, the order matters
+
+# ── Output ─────────────────────────────────────────────────────────────────────
+output_root: output/ballon1_test       # working directory for all outputs
+workspace: preprocess/time_0000        # relative to output_root; time suffix auto-expanded per ts
+diff_folder_name: diffusion            # ViewCrafter output dir (relative to workspace)
+sparse_folder_name: sparse             # SfM output dir (relative to workspace); data at sparse/0/
+depth_folder_name: depth               # VideoDepthAnything output dir (relative to output_root)
+
+# ── Pipeline stages ────────────────────────────────────────────────────────────
+run_pseudo_views: true     # Stage 1: VGGT + ViewCrafter pseudo-view generation
+run_sfm: true              # Stage 2: COLMAP SfM at time=0
+run_transforms: true       # Stage 3: extend SfM transforms to all timestamps
+run_roma_pcd: true         # Stage 4 (optional): RoMa foreground point cloud merging, for better initialization
+run_video_depth: true      # Stage 5 (optional): VideoDepthAnything depth alignment
+
+# ── Model weights ──────────────────────────────────────────────────────────────
+vggt_model_path: /path/to/vggt/model.pt
+viewcrafter_ckpt_path: /path/to/model_sparse.ckpt
+roma_indoor_ckpt: /path/to/roma_indoor.pth
+dinov2_ckpt: /path/to/dinov2_vitl14_pretrain.pth
+flowformer_ckpt: /path/to/sintel.pth
+vda_ckpt: submodules/VideoDepthAnything/checkpoints/video_depth_anything_vitl.pth
+
+# ── Runtime ────────────────────────────────────────────────────────────────────
+device: cuda
+gpu_id: 7                  # sets CUDA_VISIBLE_DEVICES
+video_length: 25           # frames per ViewCrafter interpolation clip
+skip: 1                    # RoMa frame skip (1 = use all frames)

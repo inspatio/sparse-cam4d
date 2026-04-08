@@ -1,0 +1,34 @@
+# SparseCam4D Preprocessing Config
+# Example: coffee_martini scene
+
+# ── Input ──────────────────────────────────────────────────────────────────────
+cam_root: output/coffee_martini_test/images
+train_cams: [cam01, cam05, cam10]
+
+# ── Output ─────────────────────────────────────────────────────────────────────
+output_root: output/coffee_martini_test
+workspace: preprocess/time_0000
+diff_folder_name: diffusion
+sparse_folder_name: sparse
+depth_folder_name: depth
+
+# ── Pipeline stages ────────────────────────────────────────────────────────────
+run_pseudo_views: true
+run_sfm: true
+run_transforms: true
+run_roma_pcd: true
+run_video_depth: true
+
+# ── Model weights ──────────────────────────────────────────────────────────────
+vggt_model_path: /path/to/vggt/model.pt
+viewcrafter_ckpt_path: /path/to/model_sparse.ckpt
+roma_indoor_ckpt: /path/to/roma_indoor.pth
+dinov2_ckpt: /path/to/dinov2_vitl14_pretrain.pth
+flowformer_ckpt: /path/to/sintel.pth
+vda_ckpt: submodules/VideoDepthAnything/checkpoints/video_depth_anything_vitl.pth
+
+# ── Runtime ────────────────────────────────────────────────────────────────────
+device: cuda
+gpu_id: 7
+video_length: 25
+skip: 1
